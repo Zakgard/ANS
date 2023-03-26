@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "ANS SHOP";
+    int index = Convert.ToInt32(ViewBag.Message);
+    var list = ViewBag.Games as IEnumerable<ANS_SHOP.Models.Game>;
+}
+<div class=".descriptionBody">
+    <center>
+        <div class="CenteredImg">
+            <img src=@list.ToList()[index].ImagePath
+                 class="CenteredImg"
+                 width="400"
+                 height="400"
+                 text-align="center"
+                 alt="">
+        </div>
+
+        <h2>Название:</h2>
+        <p>@list.ToList()[index].Name</p>
+        <h2>Цена:</h2>
+        <p>@list.ToList()[index].Price р</p>
+        <h2>Описание:</h2>
+        <p>@list.ToList()[index].Description</p>
+        <h2>Минимальные системные требования:</h2>
+        <p>@list.ToList()[index].MinimumRequirements</p>
+        <h2>Рекомендуемые системные требования:</h2>
+        <p>@list.ToList()[index].RecomendedRequirements</p>
+
+    </center>
+
+</div>
+

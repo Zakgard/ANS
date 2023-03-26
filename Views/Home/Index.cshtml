@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "ANS SHOP";
+    var list = ViewBag.Games as IEnumerable<ANS_SHOP.Models.Game>;
+    int counetOfIndex = 0;
+}
+    <div class="container">
+        <table align="center" 
+               cellpadding="5"
+               bgcolor="#000" 
+               background="https://phonoteka.org/uploads/posts/2021-06/1624468530_3-phonoteka_org-p-temnie-igrovie-oboi-krasivo-4.jpg">
+            @for (int i = 0; i < list.Count(); i += 3)
+            {
+                <tr>
+                    <td>
+                        <img src=@list.ToList()[i].ImagePath
+                             width="300"
+                             height="300">
+                        <h2>@list.ToList()[i].Name</h2>
+                        <h2>@list.ToList()[i].Price р</h2>
+                        <h2>@Html.ActionLink("Больше информации", "GameInformation", "Home", new { id = counetOfIndex }, null)</h2>
+                    </td>
+                    <td>
+                        @if (i != list.Count() - 1 && counetOfIndex < list.Count())
+                        {
+                            counetOfIndex++;
+                            <img src=@list.ToList()[i+1].ImagePath
+                                 width="300"
+                                 height="300">
+                            <h2>@list.ToList()[i + 1].Name</h2>
+                            <h2>@list.ToList()[i + 1].Price  р</h2>
+                            <h2>@Html.ActionLink("Больше информации", "GameInformation", "Home", new { id = counetOfIndex }, null)</h2>
+                        }
+                    </td>
+                    <td>
+                        @if (i != list.Count() - 2 && counetOfIndex < list.Count() - 1)
+                        {
+                            counetOfIndex++;
+                            <img src=@list.ToList()[i + 2].ImagePath
+                                 width="300"
+                                 height="300">
+                            <h2>@list.ToList()[i + 2].Name</h2>
+                            <h2>@list.ToList()[i + 2].Price р</h2>
+                            <h2>@Html.ActionLink("Больше информации", "GameInformation", "Home", new { id = counetOfIndex }, null) </h2>
+                            counetOfIndex++;
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>

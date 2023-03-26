@@ -1,0 +1,143 @@
+﻿ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top: 25px; /*делаем отступ сверху*/
+    background: #000000; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+    height: 80px; /*задаем высоту*/
+}
+
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    background: #000000; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+    color: #fff; /*меняем цвет ссылок*/
+    padding: 0px 15px; /*добавляем отступ*/
+    font-family: arial; /*меняем шрифт*/
+    line-height: 50px; /*ровняем меню по вертикали*/
+    display: block;
+    border-right: 1px solid #000000; /*добавляем бордюр справа*/
+    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+}
+
+    a:hover {
+        background: #D43737; /*добавляем эффект при наведении*/
+    }
+
+li {
+    float: left; /*Размещаем список горизонтально для реализации меню*/
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+td {
+    padding: 2%;
+    text-align: center;
+    border-style: none;
+
+}
+
+table {
+    margin:  30px auto 30px auto;  
+    border-style: none;
+    table-layout: fixed;
+    width: 80%;
+}
+
+td:hover {
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+
+.h2 {
+    font-weight: 500;   
+    text-align: center;
+}
+
+body {
+    margin-bottom: 60px;
+    font-size: 20px;
+    padding-left: 40px;
+    background-image: url('https://overclockers.ru/st/legacy/blog/281867/294108_O.png');
+    color: #ffffff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.descriptionBody {
+    color: #ffffff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 60px;
+    font-size: 20px;
+    padding-left: 40px;
+    background-image: url('https://phonoteka.org/uploads/posts/2021-06/1624468530_3-phonoteka_org-p-temnie-igrovie-oboi-krasivo-4.jpg');
+}
+
+h2 {
+    color: #d57600;
+}
+
+caption{
+    padding-bottom: 20px;
+}
+
+img, .img{
+    text-align: center;
+}
+
+h1{
+    color: #09ebd0;
+}
+
+
+.wrap {
+    position: relative;
+    width: 128px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.before, .after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.after1{
+    overflow: hidden;
+    animation: move-y 5s infinite;
+}
+
+@keyframes move-y{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.CenteredImg{
+    margin: 10px auto 20px auto;
+    display: table-cell;
+    vertical-align: middle;
+}
