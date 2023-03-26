@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Наши контакты";
+}
+<script type="text/javascript">
+    var imgBg = Array('https://catherineasquithgallery.com/uploads/posts/2021-02/1614280461_59-p-chernii-fon-dlya-chata-70.jpg');
+    showImg = function () {
+        var index = Math.floor(Math.random() * imgBg.length);
+        document.getElementsByTagName('body')[0].style.backgroundImage = 'url(' + imgBg[index] + ')';
+        
+    }
+    window.onload = showImg;
+</script>
+
+<h2>@ViewBag.Title.</h2>
+<h3>Способы связи:</h3>
+
+<address>
+    Москва, Россия<br />
+    улица Новосущевская, 22, 127055<br />
+    <abbr title="Телефон:">P:</abbr>
+    89999999999
+</address>
+<center>
+    <img src="https://static.tildacdn.com/tild6165-3966-4537-b263-666238336531/3.png"
+         height="1000"
+         width="1000"
+         alt="Внешний Вид Офиса" />
+</center>
+
+
+
+    <h1>Наша группа ВК:</h1>   <a href="https://vk.com/club216938582">ANS SHOP VK</a><br />
+    <h1>Почта для поддержки:</h1> <a href="mailto:ANS_SHOP@gmail.com">ANS_SHOP@gmail.com</a>

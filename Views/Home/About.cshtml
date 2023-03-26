@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "О нас";
+}
+<script type="text/javascript">
+    var imgBg = Array('https://kartinkin.net/pics/uploads/posts/2022-08/1659477691_52-kartinkin-net-p-temnie-arti-na-rabochii-stol-oboi-62.jpg');
+    showImg = function () {
+        var index = Math.floor(Math.random() * imgBg.length);
+        document.getElementsByTagName('body')[0].style.backgroundImage = 'url(' + imgBg[index] + ')';
+
+    }
+    window.onload = showImg;
+</script>
+
+<center>
+    <h1>Наши партнеры:</h1>
+    <h1>Valve</h1>
+    <img src="https://i.pinimg.com/originals/ce/d3/e5/ced3e540588cd728ef587ad7b6eb4bf9.jpg"
+         height=80%,
+         width=80% />
+    <h1>Origin</h1>
+    <img src="https://1000marcas.net/wp-content/uploads/2021/06/Origin-Logo-1-2048x1280.png"
+         height=80%
+         width=80% />
+    <h1>Blizzard</h1>
+    <img src="https://www.pelicanhillmagazine.com/files/18009_Pelican_Hill_178_crop_1600pxs_wide_rgb-1024x620.jpg"
+         height=80%
+         width=80% />
+    <h1>Epic Games</h1>
+    <img src="https://www.kindpng.com/picc/m/200-2007292_transparent-games-clipart-black-and-white-epic-games.png"
+         height=80%
+         width=80% />
+    <h1>Battle.net</h1>
+    <img src="https://ok-wifi.ru/wp-content/uploads/2021/11/battle-net.png"
+         height=80%
+         width=80% />
+
+</center>
+

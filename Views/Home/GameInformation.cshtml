@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "ANS SHOP";
+    int index = Convert.ToInt32(ViewBag.Message);
+    var list = ViewBag.Games as IEnumerable<ANS_SHOP.Models.Game>;
+}
+<script type="text/javascript">
+    var imgBg = Array('https://catherineasquithgallery.com/uploads/posts/2021-02/1614438783_11-p-fon-minimalizm-temnii-14.jpg', 'https://phonoteka.org/uploads/posts/2021-04/1619071419_5-phonoteka_org-p-vedmak-fon-5.jpg'); //список файлов с фонами
+        showImg = function () {
+            var index = Math.floor(Math.random() * imgBg.length); //номер случайного фона
+            document.getElementsByTagName('body')[0].style.backgroundImage = 'url(' + imgBg[index] + ')';
+            setTimeout(showImg, 10000); //повтор через секунду
+        }
+        window.onload = showImg; //назначить обработчик события
+</script>
+<div class=".descriptionBody">
+    <center>
+        <div class="CenteredImg">
+            <img src=@list.ToList()[index].ImagePath
+                 class="CenteredImg"
+                 width="400"
+                 height="400"
+                 text-align="center"
+                 alt="">
+        </div>
+
+        <h2>Название:</h2>
+        <p>@list.ToList()[index].Name</p>
+        <h2>Цена:</h2>
+        <p>@list.ToList()[index].Price р</p>
+        <h2>Описание:</h2>
+        <p>@list.ToList()[index].Description</p>
+        <h2>Минимальные системные требования:</h2>
+        <p>@list.ToList()[index].MinimumRequirements</p>
+        <h2>Рекомендуемые системные требования:</h2>
+        <p>@list.ToList()[index].RecomendedRequirements</p>
+
+    </center>
+
+</div>
+
